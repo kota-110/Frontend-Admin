@@ -13,7 +13,7 @@
         </li>
 				 <!-- Menu Transportasi-->
 				 <li class="active">
-          <a href="<?php echo base_url()?>index.php/admin/home/transportasi">
+          <a href="<?php echo base_url()?>index.php/admin/home/tampil_transportasi">
             <i class="fa fa-subway"></i>
             <span>Transportasi</span> 
           </a>

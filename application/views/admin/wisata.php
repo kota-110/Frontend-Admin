@@ -16,9 +16,8 @@
     <section class="content-header">
       <h1>
         Data Tempat Wisata
-        <!-- <small>Version 2.0</small> -->
 			</h1>
-			<a href="#" class="btn btn-primary"> Tambah </a>
+			<a href="<?php echo base_url()?>index.php/admin/c_tempatwisata/tampil_formwisata" class="btn btn-primary"> Tambah </a>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Tempat Wisata</a></li>
 				<li class="active">Data Tempat Wisata</li>
@@ -31,62 +30,50 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header">
-							<h3 class="box-title">Data Tempat Wisata</h3>
-						</div>
-						<div class="box-body">
-              <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap"><div class="row"><div class="col-sm-6"></div><div class="col-sm-6"></div></div><div class="row"><div class="col-sm-12"><table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
-                <thead>
-                <tr role="row">
+				<h3 class="box-title">Data Tempat Wisata</h3>
+			</div>
+			<div class="box-body">
+              <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+              	<div class="row">
+              		<div class="col-sm-6"></div>
+              		<div class="col-sm-6"></div>
+              	</div>
+              	<div class="row">
+              		<div class="col-sm-12">
+              			<table id="example2" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+		                	<thead>
+				                <tr role="row">
 									<th class="sorting_asc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending">Nama Tempat Wisata</th>
 									<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">Alamat</th>
 									<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Jam Buka</th>
 									<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Jam Tutup</th>
 									<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Deskripsi</th>
 									<th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Aksi</th>
-
-								</thead>
-								<?php 
-										// $url="https://tugas-akhir-kota110.herokuapp.com/attractions";
-										// $get_url = file_get_contents($url);
-										// $data = json_decode($get_url, true);
-								// if(isset($data)) {	
-										foreach ($listwisata as $row) {
-								?>
-                <tbody>
-                <tr role="row" class="odd">
-                  <td class="sorting_1"><?php echo $row->namaWisata; ?></td>
-                  <td><?php echo $row->alamat; ?></td>
-                  <td><?php echo $row->jamBuka; ?></td>
-                  <td><?php echo $row->jamTutup; ?></td>
-									<td><?php echo $row->deskripsi; ?></td>
-									<td> 
-										<a href="https://adminlte.io/download/AdminLTE" class="btn btn-warning"><i class="fa fa-download"></i> Ubah</a>
-										<a href="https://adminlte.io/download/AdminLTE" class="btn btn-danger"><i class="fa fa-download"></i> Hapus</a>
-									</td>
-
-                <!-- </tr><tr role="row" class="even">
-                  <td class="sorting_1">Gecko</td>
-                  <td>Firefox 1.5</td>
-                  <td>Win 98+ / OSX.2+</td>
-                  <td>1.8</td>
-									<td>
-									<a href="https://adminlte.io/download/AdminLTE" class="btn btn-warning"><i class="fa fa-download"></i> Ubah</a>
-									<a href="https://adminlte.io/download/AdminLTE" class="btn btn-danger"><i class="fa fa-download"></i> Hapus</a>
- 
-									</td> -->
-
-                </tr> 
-								</tbody>
-                </tfoot>
-							</table></div></div>
+							</thead>
 							<?php 
-									// }		
+								foreach ($listwisata['values'] as $row) {
+							?>
+			                <tbody>
+			                <tr role="row" class="odd">
+			                  <td class="sorting_1"><?php echo $row['namaWisata']; ?></td>
+			                  <td><?php echo $row['alamat']; ?></td>
+			                  <td><?php echo $row['jamBuka']; ?></td>
+			                  <td><?php echo $row['jamTutup']; ?></td>
+							  <td><?php echo $row['deskripsi']; ?></td>
+							  <td> 
+								<a href="https://adminlte.io/download/AdminLTE" class="btn btn-warning"><i class="fa fa-download"></i> Ubah</a>
+								<a href="https://adminlte.io/download/AdminLTE" class="btn btn-danger"><i class="fa fa-download"></i> Hapus</a>
+							  </td>
+			                </tr> 
+							</tbody>
+							<?php 		
 								}			
 							?>
-							<div class="row">
-							</div>
-							<div class=col-sm-5>
-</div>
+						</table>	
+					</div>
+				</div>
+						<div class="row">
+							<div class=col-sm-5></div>
 							<div class="col-sm-7">
 								<div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
 									<ul class="pagination">
@@ -109,10 +96,10 @@
 								</div>
 							</div>
 						</div>
-					</div>
+			  </div>
             </div>
-					</div>	
-				</div>
+		  </div>	
+		</div>
 	</div>
 	</section	>
 
